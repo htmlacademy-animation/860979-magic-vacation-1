@@ -24,6 +24,6 @@ fullPageScroll.init();
 
 let bodyNode = document.body;
 
-bodyNode.onload = function() {
-    bodyNode.classList.add('endLoad');
+bodyNode.onload = function () {
+  bodyNode.classList.add(`endLoad`);
 };
