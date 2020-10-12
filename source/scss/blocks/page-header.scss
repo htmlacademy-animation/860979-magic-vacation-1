@@ -35,6 +35,16 @@
   padding: 1rem 0;
   width: 10rem;
   color: $c-light;
+  visibility: hidden;
+  transform: translateX(-5%);
+  transition-property: visibility, transform;
+  transition-duration: 0.3s;
+  transition-timing-function: cubic-bezier(.46,.33,.52,.53);
+
+  body.endLoad & {
+    visibility: visible;
+    transform: translateX(0);
+  }
 
   @media (min-width: $stop-scaling) {
     top: -5px;
@@ -130,6 +140,16 @@
 .page-header__nav {
   display: flex;
   align-items: center;
+  visibility: hidden;
+  transform: translateX(5%);
+  transition-property: visibility, transform;
+  transition-duration: 0.3s;
+  transition-timing-function: cubic-bezier(.46,.33,.52,.53);
+
+  body.endLoad & {
+    visibility: visible;
+    transform: translateX(0);
+  }
 
   @media (max-width: $tablet) and (orientation: portrait) {
     position: fixed;
