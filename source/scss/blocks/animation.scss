@@ -27,11 +27,13 @@
 @keyframes widthLeft {
   0% {
     visibility: hidden;
+    opacity: 0;
     transform: translateX(15px);
   }
 
   100% {
     visibility: visible;
+    opacity: 1;
     transform: translateX(0);
   }
 }

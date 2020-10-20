@@ -30,9 +30,9 @@ bodyNode.onload = function () {
 
 // animationend
 
-const animated = document.querySelector(`.rules__item:nth-child(4) p`);
-const rulesBtn = document.querySelector(`.rules__link`);
+const lastItem = document.querySelector(`.rules__list > :last-child`);
+const rulesScreen = document.querySelector(`.screen--rules`);
 
-animated.onanimationend = () => {
-  rulesBtn.classList.add(`animated`);
+lastItem.onanimationend = () => {
+  rulesScreen.classList.add(`animated`);
 };
