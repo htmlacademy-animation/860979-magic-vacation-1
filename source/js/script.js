@@ -27,3 +27,12 @@ let bodyNode = document.body;
 bodyNode.onload = function () {
   bodyNode.classList.add(`endLoad`);
 };
+
+// animationend
+
+const lastItem = document.querySelector(`.rules__list > :last-child`);
+const rulesScreen = document.querySelector(`.screen--rules`);
+
+lastItem.onanimationend = () => {
+  rulesScreen.classList.add(`animated`);
+};
