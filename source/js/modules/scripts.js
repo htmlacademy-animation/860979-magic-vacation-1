@@ -1,7 +1,7 @@
 import {
   TypographyBuilder
 }
-from './typography-builder';
+  from './typography-builder';
 
 export
 default () => document.addEventListener(`DOMContentLoaded`, () => {
