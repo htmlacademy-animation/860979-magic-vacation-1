@@ -7,9 +7,11 @@ import chat from './modules/chat.js';
 import result from './modules/result.js';
 import form from './modules/form.js';
 import social from './modules/social.js';
+import scripts from './modules/scripts.js';
 import FullPageScroll from './modules/full-page-scroll';
 
 // init modules
+scripts();
 mobileHeight();
 slider();
 menu();
@@ -20,13 +22,11 @@ form();
 social();
 
 const fullPageScroll = new FullPageScroll();
-fullPageScroll.init();
 
-let bodyNode = document.body;
+setTimeout(() => {
+  fullPageScroll.init();
+}, 0);
 
-bodyNode.onload = function () {
-  bodyNode.classList.add(`endLoad`);
-};
 
 // animationend
 
@@ -35,4 +35,12 @@ const rulesScreen = document.querySelector(`.screen--rules`);
 
 lastItem.onanimationend = () => {
   rulesScreen.classList.add(`animated`);
+};
+
+// animationend Flamingo
+
+const flamingoImage = document.querySelector(`.result__flamingo`);
+
+flamingoImage.onanimationend = () => {
+  flamingoImage.classList.add(`rotate`);
 };

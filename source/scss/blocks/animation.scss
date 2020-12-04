@@ -3,37 +3,115 @@
     visibility: hidden;
     transform: scale(0);
   }
-
   100% {
     visibility: visible;
     transform: scale(1);
   }
 }
-
 @keyframes fadeLeft {
   0% {
     visibility: hidden;
     opacity: 0;
     transform: translateX(15px);
   }
-
   100% {
     visibility: visible;
     opacity: 1;
     transform: translateX(0);
   }
 }
-
 @keyframes widthLeft {
   0% {
     visibility: hidden;
     opacity: 0;
     transform: translateX(15px);
   }
-
   100% {
     visibility: visible;
     opacity: 1;
     transform: translateX(0);
+  }
+}
+@keyframes showBottomFlamingo {
+  0% {
+    visibility: hidden;
+    opacity: 0;
+    transform: translateY(0) rotate(-38deg);
+  }
+  100% {
+    visibility: visible;
+    opacity: 1;
+    transform: translateY(-21%) rotate(0);
+  }
+}
+@keyframes showBottomSuitcase {
+  0% {
+    transform: translateY(0) scale(0);
+  }
+  60% {
+    transform: translateY(-24%) scale(1.2);
+  }
+  100% {
+    transform: translateY(-24%) scale(1);
+  }
+}
+@keyframes showLeafBlueOne {
+  0% {
+    visibility: visible;
+    transform: scale(1);
+    transform: rotate(0deg);
+  }
+  14.5% {
+    transform: rotate(10deg);
+  }
+  29% {
+    transform: rotate(0deg);
+  }
+  43.5% {
+    transform: rotate(5deg);
+  }
+  58% {
+    transform: rotate(0deg);
+  }
+  72.5% {
+    transform: rotate(3deg);
+  }
+  100% {
+    visibility: visible;
+    transform: rotate(0deg);
+  }
+}
+@keyframes showLeafBlueTwo {
+  0% {
+    visibility: visible;
+    transform: scale(1);
+    transform: rotate(0deg);
+  }
+  14.5% {
+    transform: rotate(-15deg);
+  }
+  29% {
+    transform: rotate(0deg);
+  }
+  43.5% {
+    transform: rotate(-10deg);
+  }
+  58% {
+    transform: rotate(0deg);
+  }
+  72.5% {
+    transform: rotate(-5deg);
+  }
+  100% {
+    visibility: visible;
+    transform: rotate(0deg);
+  }
+}
+@keyframes flamingoRotate {
+  0%, 100% {
+    transform: translateY(-21%) rotate(-2deg);
+  }
+  50% {
+    transform: translateY(-25%) rotate(2deg);
   }
 }
