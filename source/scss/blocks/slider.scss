@@ -244,6 +244,23 @@
   }
 }
 
+.slider__control--prev {
+  animation-duration: 1.2s;
+  animation-fill-mode: forwards;
+  
+  .active & {
+    animation-name: elementRotateInLeft;
+  }
+}
+
+.slider__control--next {
+  animation-duration: 1.2s;
+  animation-fill-mode: forwards;
+  
+  .active & {
+    animation-name: elementRotateInRight;
+  }
+}
 .slider__pagination.swiper-pagination {
   position: absolute;
   bottom: 2.8rem;
