@@ -44,7 +44,3 @@ const flamingoImage = document.querySelector(`.result__flamingo`);
 flamingoImage.onanimationend = () => {
   flamingoImage.classList.add(`rotate`);
 };
-
-
-
-
