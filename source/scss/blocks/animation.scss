@@ -154,3 +154,12 @@
     opacity: 1;
   }
 }
+
+@keyframes flashing {
+  0% {
+    fill: #000;
+  }
+  100% {
+    fill: #fff;
+  }
+}
