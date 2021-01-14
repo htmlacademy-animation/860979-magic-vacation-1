@@ -5,27 +5,22 @@
   right: 0;
   padding: 2.7rem 0;
   z-index: 10;
-
   @media (min-width: $stop-scaling) {
     padding: 27px 0;
   }
-
   @media (max-width: $tablet) and (orientation: portrait) {
     padding: 0.9rem 0;
   }
-
   @media (max-width: $mobile) and (orientation: landscape) {
     padding: 0.9rem 0;
   }
 }
-
 .page-header__wrapper {
   @include container;
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
-
 .page-header__logo {
   @include hover;
   position: relative;
@@ -39,48 +34,42 @@
   transform: translateX(-5%);
   transition-property: visibility, transform;
   transition-duration: 0.3s;
-  transition-timing-function: cubic-bezier(.46,.33,.52,.53);
+  transition-timing-function: cubic-bezier(.46, .33, .52, .53);
 
   body.endLoad & {
-    visibility: visible;
-    transform: translateX(0);
-  }
+      visibility: visible;
+      transform: translateX(0);
+    }
 
   @media (min-width: $stop-scaling) {
     top: -5px;
     padding: 10px 0;
     width: 113px;
   }
-
   @media (max-width: $tablet) and (orientation: portrait) {
     top: 0;
     padding: 0.5rem 0;
     width: 6.8rem;
     z-index: 1;
-
     .page-header--menu-opened & {
       color: $c-dark;
     }
   }
-
   @media (max-width: $mobile) and (orientation: landscape) {
     top: 0;
     padding: 0.5rem 0;
     width: 6.8rem;
     z-index: 1;
-
     .page-header--menu-opened & {
       color: $c-dark;
     }
   }
-
   svg {
     display: block;
     width: 100%;
     height: auto;
   }
 }
-
 .page-header__toggler {
   @include btn-reset;
   position: relative;
@@ -91,15 +80,12 @@
   background-color: $c-light;
   border-radius: 50%;
   z-index: 1;
-
   @media (max-width: $tablet) and (orientation: portrait) {
     display: block;
   }
-
   @media (max-width: $mobile) and (orientation: landscape) {
     display: block;
   }
-
   &::before,
   &::after {
     content: "";
@@ -108,21 +94,17 @@
     height: 1px;
     background-color: $c-dark;
   }
-
   &::before {
     top: 0.9rem;
     width: 1rem;
     box-shadow: 0 0.6rem 0 0 $c-dark;
   }
-
   &::after {
     top: 1.2rem;
     width: 0.7rem;
   }
-
   .page-header--menu-opened & {
-    &::before,
-    &::after {
+    &::before, &::after {
       top: 50%;
       left: 50%;
       transform: translate(-50%) rotate(45deg);
@@ -130,27 +112,22 @@
       height: 2px;
       box-shadow: none;
     }
-
     &::after {
       transform: translate(-50%) rotate(-45deg);
     }
   }
 }
-
 .page-header__nav {
   display: flex;
   align-items: center;
-  visibility: hidden;
-  transform: translateX(5%);
+  opacity: 0;
   transition-property: visibility, transform;
   transition-duration: 0.3s;
-  transition-timing-function: cubic-bezier(.46,.33,.52,.53);
+  transition-timing-function: cubic-bezier(.46, .33, .52, .53);
 
-  body.endLoad & {
-    visibility: visible;
-    transform: translateX(0);
-  }
-
+    body.endLoad & {
+      opacity: 1;
+    }
   @media (max-width: $tablet) and (orientation: portrait) {
     position: fixed;
     top: 0;
@@ -163,12 +140,10 @@
     padding: 4rem 3.5rem;
     color: $c-dark;
     background-color: $c-light;
-
     .page-header--menu-opened & {
       transform: translateX(0);
     }
   }
-
   @media (max-width: $mobile) and (orientation: landscape) {
     position: fixed;
     top: 0;
@@ -183,13 +158,11 @@
     color: $c-dark;
     background-color: $c-light;
     overflow-y: auto;
-
     .page-header--menu-opened & {
       transform: translateX(0);
     }
   }
 }
-
 .page-header__menu {
   font-family: $font-alt;
   text-transform: uppercase;
@@ -197,72 +170,58 @@
   font-size: 1.2rem;
   line-height: 1.0418;
   color: $c-light;
-
   @media (min-width: $stop-scaling) {
     font-size: 12px;
   }
-
   @media (max-width: $tablet) and (orientation: portrait) {
     margin: auto 0;
     font-size: 2.4rem;
     color: $c-dark;
   }
-
   @media (max-width: $mobile) and (orientation: landscape) {
     margin: auto 0;
     font-size: 1.4rem;
     color: $c-dark;
   }
-
   ul {
     @include list-reset;
     display: flex;
     align-items: center;
-
     @media (max-width: $tablet) and (orientation: portrait) {
       flex-direction: column;
       align-items: flex-start;
       padding-top: 3.8rem;
     }
-
     @media (max-width: $mobile) and (orientation: landscape) {
       flex-direction: column;
       align-items: flex-start;
       padding-top: 2rem;
     }
   }
-
   li {
     margin-left: 4rem;
-
     @media (min-width: $stop-scaling) {
       margin-left: 40px;
     }
-
     @media (max-width: $tablet) and (orientation: portrait) {
       margin: 0 0 2.5rem;
-
       &:last-child {
         margin-bottom: 0;
       }
     }
-
     @media (max-width: $mobile) and (orientation: landscape) {
       margin: 0 0 1.5rem;
-
       &:last-child {
         margin-bottom: 0;
       }
     }
   }
-
   a {
     position: relative;
     display: block;
     color: inherit;
     padding: 0 0.5em 0.5em;
     transition: all 0.3s linear;
-
     &::after {
       content: "";
       position: absolute;
@@ -273,32 +232,27 @@
       background-color: $c-light;
       opacity: 0;
       transition: all 0.3s ease-in;
-
       @media (max-width: $tablet) and (orientation: portrait) {
         left: 0;
         right: 0;
         background-color: $c-dark;
       }
-
       @media (max-width: $mobile) and (orientation: landscape) {
         left: 0;
         right: 0;
         background-color: $c-dark;
       }
     }
-
     &.active {
       &::after {
         width: 100%;
         opacity: 1;
       }
     }
-
     &:hover,
     &:focus {
       color: $c-purple;
       outline: none;
-
       &::after {
         right: auto;
         left: 0;
@@ -306,22 +260,39 @@
         opacity: 1;
         background-color: $c-purple;
       }
+      .ui-violet &::after {
+        background-color: $c-dark;
+      }
+      .ui-dark-blue &::after {
+        background-color: $light-blue;
+      }
+      .ui-light-blue &::after {
+        background-color: $dark-blue;
+      }
     }
+    .ui-violet &:hover {
+      color: $c-dark;
+    }
+
+    .ui-dark-blue &:hover {
+      color: $light-blue;
+    }
+
+    .ui-light-blue &:hover {
+      color: $dark-blue;
+    }
+
   }
 }
-
 .page-header__social {
   margin-left: 4.8rem;
-
   @media (min-width: $stop-scaling) {
     margin-left: 48px;
   }
-
   @media (max-width: $tablet) and (orientation: portrait) {
     margin-left: 0;
     width: 100%;
   }
-
   @media (max-width: $mobile) and (orientation: landscape) {
     margin-left: 0;
     width: 100%;

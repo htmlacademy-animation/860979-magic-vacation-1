@@ -41,6 +41,14 @@
   li {
     position: relative;
     padding: 0 0.6rem;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 1s ease;
+
+    .active & {
+      opacity: 1;
+      visibility: visible;
+    }
 
     @media (min-width: $stop-scaling) {
       padding: 0 6px;

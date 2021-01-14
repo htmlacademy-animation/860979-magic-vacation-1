@@ -44,5 +44,4 @@ default () => document.addEventListener(`DOMContentLoaded`, () => {
   animationTopScreenPrizesLine.run();
   animationTopScreenRulesLine.run();
   animationTopScreenGameLine.run();
-
 });

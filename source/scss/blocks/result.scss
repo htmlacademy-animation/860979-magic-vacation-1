@@ -97,6 +97,13 @@
   font-size: 2.4rem;
   line-height: 1.2;
   color: $c-light;
+  animation-duration: 0.5s;
+  animation-fill-mode: forwards;
+
+  .screen--show & {
+    animation-name: resultButton;
+  }
+
   @media (min-width: $stop-scaling) {
     margin: auto auto 10px;
     min-width: 340px;
@@ -124,6 +131,13 @@
     width: 4rem;
     height: 4rem;
     color: $c-dark;
+    opacity: 0;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+    animation-delay: 0.1s;
+    .screen--show & {
+      animation-name: elementRotateInRight;
+    }
     @media (min-width: $stop-scaling) {
       margin-left: 15px;
       width: 40px;

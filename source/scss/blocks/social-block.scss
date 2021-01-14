@@ -19,6 +19,18 @@
   border-radius: 50%;
   transition: color 0.4s ease-in;
 
+  .ui-violet & {
+    color: $c-purple;
+  }
+
+  .ui-dark-blue & {
+    color: $dark-blue;
+  }
+
+  .ui-light-blue & {
+    color: $light-blue;
+  }
+
   @media (max-width: $tablet) and (orientation: portrait) {
     display: none;
   }
@@ -44,11 +56,28 @@
     display: block;
     width: 2.3rem;
     height: 2.2rem;
+
+    & path {
+      animation-delay: 2s;
+      animation-fill-mode: backwards;
+   }
   }
 
   &:hover,
   .social-block--active & {
     color: $c-purple;
+
+    .ui-violet &:hover {
+      color: $c-dark;
+    }
+
+    .ui-dark-blue &:hover {
+      color: $light-blue;
+    }
+
+    .ui-light-blue &:hover {
+      color: $dark-blue;
+    }
 
     &::before {
       width: 112.5%;
@@ -64,8 +93,35 @@
     color: $c-purple;
     outline: none;
 
+    .ui-violet &:focus {
+      color: $c-dark;
+      border-color: $c-dark;
+    }
+
+    .ui-dark-blue &:focus {
+      color:  $light-blue;
+      border-color: $light-blue;
+    }
+
+    .ui-light-blue &:focus {
+      color: $dark-blue;
+      border-color: $dark-blue;
+    }
+
     &::before {
       border-color: $c-purple;
+    }
+
+   .ui-violet &::before {
+      border-color: $c-purple;
+    }
+
+    .ui-dark-blue &::before {
+      border-color: $light-blue;
+    }
+
+    .ui-light-blue &::before {
+      border-color: $dark-blue;
     }
 
     & + .social-block__list {
@@ -85,8 +141,38 @@
       background-color: $c-purple;
       border-color: $c-purple;
     }
+
+    .ui-violet & {
+      color: $c-light;
+    }
+     .ui-violet &::before {
+      background-color: $c-dark;
+      border-color: $c-dark;
+    }
+
+     .ui-dark-blue & {
+      color: $c-light;
+    }
+     .ui-dark-blue &::before {
+      background-color: $light-blue;
+      border-color: $light-blue;
+    }
+
+     .ui-light-blue & {
+      color: $c-light;
+    }
+     .ui-light-blue &::before {
+      background-color: $dark-blue;
+      border-color: $dark-blue;
+    }
+
   }
 }
+
+.ui-dark-blue .social-block__toggler:hover svg path,
+.ui-dark-blue .social-block__toggler:focus svg path {
+        color: $light-blue;
+  }
 
 .social-block__list {
   @include list-reset;
