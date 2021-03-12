@@ -1,12 +1,12 @@
 <svg xmlns="http://www.w3.org/2000/svg"
     xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 350 330">
 
-    <g id="flight">
+    <g id="image">
         <animate attributeType="CSS" attributeName="opacity" values="1; 0" dur=".3s" begin="3.7s" fill="freeze"></animate>
 
-        <g id="dirigable">
+        <g id="airship">
 
-            <g id="dirigable-gondola">
+            <g id="airship-gondola">
                 <animateTransform attributeName="transform" type="translate" values="0 0; -20 -15; 0 0; 20 10; 0 0" keySplines="0 0 .3 1; 0 0 1 1; 0 0 .3 1; 0 0 1 1;" dur="2.5s" calcMode="spline" repeatCount="indefinite" />
 
                 <animateTransform attributeName="transform" type="scale" values="1 1; 1 1.05; 1 1; 1 .95; 1 1" keySplines="0 0 .3 1; 0 0 1 1; 0 0 .3 1; 0 0 1 1;" calcMode="spline" dur="2.5s" additive="sum" repeatCount="indefinite" />
@@ -15,7 +15,7 @@
 
                 <path d="M175.44,249.28h48.36a13.27,13.27,0,0,0,13-10.65l3.74-18.32H172.36v25.89A3.09,3.09,0,0,0,175.44,249.28Z" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" />
                 <path d="M235.79,241.69h-9.22a8.31,8.31,0,0,1-8.28-8.31V220.31" fill="none" stroke="#fff" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2" />
-                <g id="dirigable-window">
+                <g id="airship-window">
                     <path d="M204.25,231.88h-2.05a3.45,3.45,0,0,0-3.43,3.45v2.92a3.45,3.45,0,0,0,3.43,3.45h2.05a3.45,3.45,0,0,0,3.43-3.45v-2.92A3.44,3.44,0,0,0,204.25,231.88Z" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
                         <animate attributeName="d" values="M 206.677 240.682 C 207.319 240.036 207.68 239.161 207.68 238.25 C 207.68 237.277 207.68 236.303 207.68 235.33 C 207.682 234.726 207.525 234.132 207.224 233.609 C 206.924 233.085 206.491 232.649 205.969 232.346 C 205.447 232.042 204.854 231.882 204.25 231.88 C 204.25 231.88 204.25 231.88 204.25 231.88 L 202.2 231.88 C 201.289 231.885 200.416 232.251 199.773 232.898 C 199.131 233.544 198.77 234.419 198.77 235.33 L 198.77 238.25 C 198.77 239.161 199.131 240.036 199.773 240.682 C 200.416 241.329 201.289 241.695 202.2 241.7 C 202.883 241.7 203.567 241.7 204.25 241.7 C 205.161 241.695 206.034 241.329 206.677 240.682;
                 M 275 225.43 C 269.29 225.43 263.58 225.43 257.87 225.43 C 253.221 225.409 248.765 223.547 245.484 220.254 C 242.202 216.961 240.355 212.499 240.35 207.85 C 240.35 195.233 240.35 182.617 240.35 170 C 240.355 165.351 242.202 160.889 245.484 157.596 C 248.765 154.303 253.221 152.441 257.87 152.42 L 275 152.42 C 279.647 152.444 284.1 154.307 287.38 157.6 C 290.659 160.892 292.505 165.353 292.51 170 L 292.51 188.915 C 292.51 195.22 292.51 201.525 292.51 207.83 C 292.507 212.48 290.663 216.944 287.384 220.24 C 284.105 223.537 279.65 225.404 275 225.43 C 275 225.43 275 225.43 275 225.43;" dur=".5s" fill="freeze" begin="3.2s"></animate>
@@ -39,7 +39,7 @@
                 <path d="M132.18,186.12c16.74-4.27,44.58-10,72.81-10,44.53,0,73.26,6.43,73.61,14.38,0,0.17,0,.34,0,0.51-0.85,7.86-29.45,14.17-73.6,14.17-28.23,0-56.07-5.76-72.81-10-3.79-1-5.79-2.53-6-4.13l0-.51c0.13-1.69,2.15-3.36,6.1-4.37" fill="#25b774" />
             </g>
 
-            <g id="balloon-engine-back">
+            <g id="balloon-back">
                 <animateTransform attributeName="transform" type="translate" values="0 0; 0 -3; 0 0; 0 3; 0 0" dur="2.5s" repeatCount="indefinite" calcMode="spline" keySplines="0 0 .3 1; 0 0 1 1; 0 0 .3 1; 0 0 1 1;" />
                 <path d="M123.23,173.34h9.16a3.29,3.29,0,0,1,3.29,3.3v5.71a3.29,3.29,0,0,1-3.29,3.3H115.57a1.32,1.32,0,0,1-1.32-1.32v-2a9,9,0,0,1,9-9" fill="#068e4d" />
                 <path d="M123.23,173.34h9.16a3.29,3.29,0,0,1,3.29,3.3v5.71a3.29,3.29,0,0,1-3.29,3.3H115.57a1.32,1.32,0,0,1-1.32-1.32v-2A9,9,0,0,1,123.23,173.34Z" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" />
@@ -48,7 +48,7 @@
                 <path d="M123.23,207.39h9.16a3.29,3.29,0,0,0,3.29-3.3v-5.71a3.29,3.29,0,0,0-3.29-3.3H115.57a1.32,1.32,0,0,0-1.32,1.32v2A9,9,0,0,0,123.23,207.39Z" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" />
             </g>
 
-            <g id="balloon-engine-front">
+            <g id="balloon-front">
                 <animateTransform attributeName="transform" type="translate" values="0 0; 0 3; 0 0; 0 -3; 0 0" dur="2.5s" repeatCount="indefinite" calcMode="spline" keySplines="0 0 .3 1; 0 0 1 1; 0 0 .3 1; 0 0 1 1;" />
                 <path d="M123.23,173.34h9.16a3.29,3.29,0,0,1,3.29,3.3v5.71a3.29,3.29,0,0,1-3.29,3.3H115.57a1.32,1.32,0,0,1-1.32-1.32v-2a9,9,0,0,1,9-9" fill="#068e4d" />
                 <path d="M123.23,173.34h9.16a3.29,3.29,0,0,1,3.29,3.3v5.71a3.29,3.29,0,0,1-3.29,3.3H115.57a1.32,1.32,0,0,1-1.32-1.32v-2A9,9,0,0,1,123.23,173.34Z" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" />
@@ -57,7 +57,7 @@
             </g>
         </g>
 
-        <g id="cloud-1">
+        <g id="cloud-front">
             <animateTransform attributeName="transform" type="translate" from="200" to="0" dur="2.5s" fill="freeze">
             </animateTransform>
             <animate attributeType="CSS" attributeName="opacity" values="0; 1; 1; 0" keyTimes="0; .3; .9; 1" dur="2.5s" fill="freeze"></animate>
@@ -70,7 +70,7 @@
 
         </g>
 
-        <g id="cloud-2" opacity="0">
+        <g id="cloud-back" opacity="0">
             <animateTransform attributeName="transform" type="translate" from="50" to="-100" dur="2s" begin="2s" fill="freeze">
             </animateTransform>
             <animate attributeType="CSS" attributeName="opacity" values="0; 1; 1; 0" keyTimes="0; .3; .9; 1" dur="2s" begin="2s" fill="freeze"></animate>
@@ -81,14 +81,14 @@
             </g>
         </g>
 
-        <g id="fire">
-            <line id="fire-1" x1="106.25" y1="179.49" x2="84.05" y2="179.49" fill="none" stroke="#fff" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2" />
+        <g id="tail">
+            <line id="tail-1" x1="106.25" y1="179.49" x2="84.05" y2="179.49" fill="none" stroke="#fff" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2" />
             <animate xlink:href="#fire-1" attributeName="x2" values="84.05; 90; 84.05;" dur=".3s" begin=".2s" repeatCount="indefinite"></animate>
 
-            <line id="fire-2" x1="106.25" y1="201.23" x2="84.05" y2="201.23" fill="none" stroke="#fff" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2" />
+            <line id="tail-2" x1="106.25" y1="201.23" x2="84.05" y2="201.23" fill="none" stroke="#fff" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2" />
             <animate xlink:href="#fire-2" attributeName="x2" values="84.05; 90; 84.05;" dur=".3s" begin=".1s" repeatCount="indefinite"></animate>
 
-            <line id="fire-3" x1="106.25" y1="190.98" x2="68.77" y2="190.98" fill="none" stroke="#fff" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2" />
+            <line id="tail-3" x1="106.25" y1="190.98" x2="68.77" y2="190.98" fill="none" stroke="#fff" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2" />
             <animate xlink:href="#fire-3" attributeName="x2" values="68.77; 75; 68.77;" dur=".3s" repeatCount="indefinite"></animate>
         </g>
 
@@ -107,22 +107,22 @@
         </clipPath>
     </defs>
 
-    <g id="gandola-inside">
+    <g id="airship-inside">
 
-        <g id="gandola-ski" opacity="0">
+        <g id="airship-ski" opacity="0">
             <animate attributeType="CSS" attributeName="opacity" from="0" to="1" dur=".3s" fill="freeze" begin="3.85s"></animate>
             <animateTransform attributeName="transform" type="translate" values="-120 0; 0 0" keySplines="0 0 0.3 1;" calcMode="spline" dur=".4s" begin="3.85s"></animateTransform>
             <path d="M91.14,327.79a2.2,2.2,0,0,1-2-2.36l13.66-193.17c1.1-15.49-4.8-21.92-8.75-24.47a1.35,1.35,0,0,1,.53-2.45C103,104,122.18,104,120,134.19L106.43,326.67a2.2,2.2,0,0,1-2.35,2Z" fill="#fff" />
             <path d="M124.5,328.17a2.2,2.2,0,0,1-2.17-2.23l2.24-193.63c0.19-15.53-6.07-21.61-10.16-23.91a1.35,1.35,0,0,1,.39-2.47c8.36-1.9,27.49-3,27.15,27.28l-2.25,192.93a2.2,2.2,0,0,1-2.22,2.18Z" fill="#fff" />
         </g>
 
-        <g id="gandola-inside-window" opacity="0">
+        <g id="airship-inside-window" opacity="0">
             <animate attributeType="CSS" attributeName="opacity" from="0" to="1" dur=".1s" fill="freeze" begin="3.7s"></animate>
             <g>
                 <path d="M275,225.43H257.87a17.6,17.6,0,0,1-17.52-17.58V170a17.6,17.6,0,0,1,17.52-17.58H275A17.6,17.6,0,0,1,292.51,170v37.83A17.61,17.61,0,0,1,275,225.43Z" fill="none" stroke="#fff" stroke-width="2" />
             </g>
             <g clip-path="url(#window)">
-                <g id="gandola-inside-clouds" transform="translate(300 160)">
+                <g id="airship-inside-clouds" transform="translate(300 160)">
                     <animateTransform attributeName="transform" type="translate" values="300 160; -100 160" dur="5s" begin="3.7s" repeatCount="indefinite"></animateTransform>
                     <line x1="28.18" y1="38.34" x2="91.09" y2="38.34" fill="none" stroke="#fff" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2" />
                     <path d="M41.77,97.54H77.06a12.4,12.4,0,1,1,24.8,0h17.93" transform="translate(-40.77 -69.46)" fill="none" stroke="#fff" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2" />
@@ -133,7 +133,7 @@
             </g>
         </g>
 
-        <g id="gandola-chair" opacity="0">
+        <g id="airship-chair" opacity="0">
             <animate attributeType="CSS" attributeName="opacity" from="0" to="1" dur=".3s" fill="freeze" begin="3.7s"></animate>
             <animateTransform attributeName="transform" type="translate" values="-120 0; 0 0" keySplines="0 0 0.3 1;" calcMode="spline" dur=".5s" begin="3.7s"></animateTransform>
             <path d="M257.5,259.82H196.76V245.63h55.09a9.92,9.92,0,0,1,9.9,9.93,4.26,4.26,0,0,1-4.25,4.25" fill="#a67ee5" />
@@ -151,7 +151,7 @@
             <line x1="151.57" y1="195.44" x2="209.05" y2="195.44" fill="none" stroke="#fff" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2" />
         </g>
 
-        <g id="gandola-plant" opacity="0" style="transform-origin: bottom;">
+        <g id="airship-plant" opacity="0" style="transform-origin: bottom;">
             <animate attributeType="CSS" attributeName="opacity" from="0" to="1" dur=".3s" fill="freeze" begin="3.8s"></animate>
             <animateTransform attributeName="transform" type="translate" values="-120 0; 0 0" keySplines="0 0 0.3 1;" calcMode="spline" dur=".4s" begin="3.8s"></animateTransform>
             <animateTransform attributeName="transform" type="rotate" values="0; 2; -1.5; 0.5; -0.5; 0" keySplines="0 0 0.3 1;0 0 0.3 1; 0 0 0.3 1; 0 0 0.3 1; 0 0 0.3 1;" calcMode="spline" dur="2s" begin="4.05s" additive="sum">
