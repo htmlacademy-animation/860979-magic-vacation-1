@@ -56,30 +56,57 @@
                 <path d="M123.23,207.39h9.16a3.29,3.29,0,0,0,3.29-3.3v-5.71a3.29,3.29,0,0,0-3.29-3.3H115.57a1.32,1.32,0,0,0-1.32,1.32v2A9,9,0,0,0,123.23,207.39Z" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" />
             </g>
         </g>
-
-        <g id="cloud-front">
-            <animateTransform attributeName="transform" type="translate" from="200" to="0" dur="2.5s" fill="freeze">
-            </animateTransform>
-            <animate attributeType="CSS" attributeName="opacity" values="0; 1; 1; 0" keyTimes="0; .3; .9; 1" dur="2.5s" fill="freeze"></animate>
-
-            <line x1="68.95" y1="107.8" x2="131.86" y2="107.8" fill="none" stroke="#fff" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2" />
-
-            <g>
-                <path d="M41.77,97.54H77.06a12.4,12.4,0,1,1,24.8,0h17.93" fill="none" stroke="#fff" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2" />
-            </g>
-
+        <g id="cloud-front" opacity="0">
+        <animate
+            attributeName="opacity"
+            values="0; 1; 1; 0"
+            keySplines="0.33 0 0.67 1;
+                        0.33 0 0.67 1;
+                        0.33 0 0.67 1;"
+            calcMode="spline"
+            dur="2s"/>
+        <g>
+            <animateTransform
+            attributeName="transform"
+            type="translate"
+            from="250 0"
+            to="10 0"
+            calcMode="linear"
+            dur="2s"
+            additive="sum"/>
+            <line x1="68.95" y1="107.8" x2="131.86" y2="107.8" fill="none" stroke="#fff" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2"/></g>
+        <g>
+            <animateTransform
+            attributeName="transform"
+            type="translate"
+            from="250 0"
+            to="0 0"
+            calcMode="linear"
+            dur="2s"
+            additive="sum"/>
+            <path d="M41.77,97.54H77.06a12.4,12.4,0,1,1,24.8,0h17.93" fill="none" stroke="#fff" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2"/>
         </g>
-
+        </g>
         <g id="cloud-back" opacity="0">
-            <animateTransform attributeName="transform" type="translate" from="50" to="-100" dur="2s" begin="2s" fill="freeze">
-            </animateTransform>
-            <animate attributeType="CSS" attributeName="opacity" values="0; 1; 1; 0" keyTimes="0; .3; .9; 1" dur="2s" begin="2s" fill="freeze"></animate>
-            <line x1="258.96" y1="93.19" x2="298.74" y2="93.19" fill="none" stroke="#fff" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2" />
-            <g>
-                <path d="M278.75,82.91H251.39a12.4,12.4,0,1,0-24.8,0H208.65" fill="none" stroke="#fff" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2" />
-                <line x1="287.01" y1="82.91" x2="309.21" y2="82.91" fill="none" stroke="#fff" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2" />
-            </g>
-        </g>
+            <animate
+                attributeName="opacity"
+                values="0; 1; 1; 0"
+                keySplines="0.33 0 0.67 1;
+                            0.33 0 0.67 1;
+                            0.33 0 0.67 1;"
+                calcMode="spline"
+                begin="1s"
+                dur="2s"/>
+        <g>
+        <animateTransform attributeName="transform" type="translate" begin="1s" from="100 0" to="-100 0" dur="1.95s" additive="sum"/>
+        <path d="M278.75,82.91H251.39a12.4,12.4,0,1,0-24.8,0H208.65" fill="none" stroke="#fff" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2"/>
+        <line x1="287.01" y1="82.91" x2="309.21" y2="82.91" fill="none" stroke="#fff" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2"/>
+      </g>
+      <g>
+        <animateTransform attributeName="transform" type="translate" begin="1s" from="100 0" to="-90 0" dur="2s" additive="sum"/>
+        <line x1="258.96" y1="93.19" x2="298.74" y2="93.19" fill="none" stroke="#fff" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2"/>
+      </g>
+    </g>
 
         <g id="tail">
             <line id="tail-1" x1="106.25" y1="179.49" x2="84.05" y2="179.49" fill="none" stroke="#fff" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2" />
