@@ -9,6 +9,7 @@ import form from './modules/form.js';
 import social from './modules/social.js';
 import scripts from './modules/scripts.js';
 import FullPageScroll from './modules/full-page-scroll';
+import prizes from "./modules/prizes";
 
 // init modules
 scripts();
@@ -23,9 +24,10 @@ social();
 
 const fullPageScroll = new FullPageScroll();
 
-setTimeout(() => {
+document.addEventListener(`DOMContentLoaded`, () => {
   fullPageScroll.init();
-}, 0);
+  prizes();
+});
 
 
 // animationend
