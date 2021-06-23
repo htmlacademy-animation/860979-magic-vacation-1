@@ -2,7 +2,7 @@
   flex-grow: 1;
   display: flex;
   flex-direction: column;
-  padding: 14.6rem 0 7.7rem;
+  padding: 14.6rem 0 0;
   width: 100%;
 
   @media (min-width: $stop-scaling) {
@@ -23,7 +23,7 @@
 }
 
 .prizes__title {
-  margin: 0 0 6rem;
+  margin: 0 0 5.2rem;
   text-transform: uppercase;
   font-family: $font-alt;
   font-weight: 400;
@@ -58,16 +58,6 @@
   text-transform: uppercase;
   font-size: 2.4rem;
   line-height: 1.2;
-  opacity: 0;
-  transform: translateY(10px);
-  transition-property: transform, opacity;
-  transition-duration: 1s;
-  transition-timing-function: ease;
-
-  .active & {
-    opacity: 1;
-    transform: translateY(0);
-  }
 
   @media (min-width: $stop-scaling) {
     margin-left: 58px;
@@ -103,7 +93,9 @@
   display: flex;
   justify-content: flex-end;
   align-items: flex-end;
-  margin-top: auto;
+  margin-top: -2rem;
+  flex-grow: 1;
+  margin-bottom: 6rem;
 
   @media (max-width: $tablet) and (orientation: portrait) {
     flex-direction: column;
@@ -115,12 +107,7 @@
 }
 
 .prizes__item {
-  margin-left: 7.5rem;
-  visibility: hidden;
-  opacity: 0;
-  animation-name: fadeIn;
-      animation-duration: 1s;
-      animation-fill-mode: forwards;
+
 
   @media (min-width: $stop-scaling) {
     margin-left: 75px;
@@ -129,7 +116,6 @@
   @media (max-width: $tablet) and (orientation: portrait) {
     display: flex;
     align-items: flex-end;
-    margin-left: 0;
     margin-bottom: 2.8rem;
 
     &:last-child {
@@ -142,25 +128,24 @@
   }
 
   &--journeys {
-   
-    
-    .prizes__icon {
-      position: relative;
-      left: -5.9rem;
-      bottom: -1.4rem;
-      width: 26.8rem;
-      
+    transform: translateX(100%);
 
+    &.active {
+      animation: prizesItemJourneys 0.5s linear 4s forwards;
+    }
+
+    .prizes__icon {
+      animation: prize-opacity 1.5s linear 0s forwards;
+      position: relative;
+      width: 28rem;
 
       @media (min-width: $stop-scaling) {
         left: -59px;
-        bottom: -14px;
         width: 268px;
       }
 
       @media (max-width: $tablet) and (orientation: portrait) {
         left: 0;
-        bottom: 0;
         width: 9.4rem;
       }
 
@@ -176,8 +161,6 @@
   }
 
   &--cases {
-    margin-left: 7rem;
-    animation-delay: 5s;
 
     @media (min-width: $stop-scaling) {
       margin-left: 70px;
@@ -189,12 +172,10 @@
     }
 
     .prizes__icon {
-      width: 18.8rem;
-      animation-name: prize-opacity;
-      animation-delay: 0.7s;
+      width: 34rem;
 
       @media (min-width: $stop-scaling) {
-        width: 188px;
+        width: 268px;
       }
 
       @media (max-width: $tablet) and (orientation: portrait) {
@@ -203,26 +184,28 @@
       }
 
       @media (max-width: $tablet) and (orientation: landscape) {
-        width: 9.5rem;
+        width: 13rem;
       }
 
       @media (max-width: $mobile) and (orientation: landscape) {
-        width: 7rem;
+        width: 10rem;
       }
     }
   }
 
   &--codes {
-    animation-delay: 8s;
+    margin-left: 12rem;
 
     @media (max-width: $tablet) and (orientation: portrait) {
       padding-left: 0.8rem;
     }
+    .prizes__desc b {
+      // 3 единицы шрифта
+      width: 3ch;
+    }
 
     .prizes__icon {
       width: 26rem;
-      animation-name: prize-opacity;
-      animation-delay: 1s;
 
       @media (min-width: $stop-scaling) {
         width: 260px;
@@ -258,9 +241,19 @@
 .prizes__desc {
   display: flex;
   align-items: flex-end;
+  justify-content: flex-end;
   margin: 5.6rem 0 0 0;
   font-size: 1.8rem;
   line-height: 1.1;
+  opacity: 0;
+
+  &.active {
+    animation: prize-opacity 0.1s ease 2s forwards;
+
+    span {
+      animation: showTextToLeft 0.8s ease 2s forwards;
+    }
+  }
 
   @media (min-width: $stop-scaling) {
     margin-top: 56px;

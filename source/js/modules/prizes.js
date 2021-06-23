@@ -11,13 +11,13 @@ export default () => {
   const images = [
     {
       name: `prize-journeys`,
-      path: `img/primary-award.svg`,
+      path: `img/primary-prize.svg`,
       timeDelay: 500,
       target: prizeJourneys,
     },
     {
       name: `prize-cases`,
-      path: `img/secondary-award.svg`,
+      path: `img/secondary-prize.svg`,
       timeDelay: 4500,
       target: prizeCases,
     },
