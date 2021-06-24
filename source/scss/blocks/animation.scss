@@ -176,13 +176,32 @@
 
 @keyframes prize-opacity {
   0% {
-    visibility: hidden;
     opacity: 0;
   }
   100% {
-    visibility: visible;
     opacity: 1;
   }
 }
 
+@keyframes prizesItemJourneys {
+  0% {
+    transform: translateX(100%);
+  }
+
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@keyframes showTextToLeft {
+  from {
+    transform: translateX(3rem);
+    opacity: 0;
+  }
+
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
 
