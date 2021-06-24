@@ -1113,10 +1113,22 @@ img {
 
 @keyframes prize-opacity {
   0% {
-    visibility: hidden;
     opacity: 0; }
   100% {
-    visibility: visible;
+    opacity: 1; } }
+
+@keyframes prizesItemJourneys {
+  0% {
+    transform: translateX(100%); }
+  100% {
+    transform: translateX(0); } }
+
+@keyframes showTextToLeft {
+  from {
+    transform: translateX(3rem);
+    opacity: 0; }
+  to {
+    transform: translateX(0);
     opacity: 1; } }
 
 .animation-screen {
@@ -2108,7 +2120,7 @@ img {
   flex-grow: 1;
   display: flex;
   flex-direction: column;
-  padding: 14.6rem 0 7.7rem;
+  padding: 14.6rem 0 0;
   width: 100%; }
   @media (min-width: 2000px) {
     .prizes {
@@ -2124,7 +2136,7 @@ img {
       padding: 5rem 0 1.5rem; } }
 
 .prizes__title {
-  margin: 0 0 6rem;
+  margin: 0 0 5.2rem;
   text-transform: uppercase;
   font-family: "Radical", "Arial", sans-serif;
   font-weight: 400;
@@ -2153,15 +2165,7 @@ img {
   max-width: 34rem;
   text-transform: uppercase;
   font-size: 2.4rem;
-  line-height: 1.2;
-  opacity: 0;
-  transform: translateY(10px);
-  transition-property: transform, opacity;
-  transition-duration: 1s;
-  transition-timing-function: ease; }
-  .active .prizes__lead {
-    opacity: 1;
-    transform: translateY(0); }
+  line-height: 1.2; }
   @media (min-width: 2000px) {
     .prizes__lead {
       margin-left: 58px;
@@ -2192,7 +2196,9 @@ img {
   display: flex;
   justify-content: flex-end;
   align-items: flex-end;
-  margin-top: auto; }
+  margin-top: -2rem;
+  flex-grow: 1;
+  margin-bottom: 6rem; }
   @media (max-width: 1024px) and (orientation: portrait) {
     .prizes__list {
       flex-direction: column;
@@ -2201,41 +2207,37 @@ img {
       margin: auto 0;
       padding-left: 2rem; } }
 
-.prizes__item {
-  margin-left: 7.5rem;
-  visibility: hidden;
-  opacity: 0;
-  animation-name: fadeIn;
-  animation-duration: 1s;
-  animation-fill-mode: forwards; }
-  @media (min-width: 2000px) {
-    .prizes__item {
-      margin-left: 75px; } }
-  @media (max-width: 1024px) and (orientation: portrait) {
-    .prizes__item {
-      display: flex;
-      align-items: flex-end;
-      margin-left: 0;
-      margin-bottom: 2.8rem; }
-      .prizes__item:last-child {
-        margin-bottom: 0; } }
-  @media (max-width: 1024px) and (orientation: landscape) {
-    .prizes__item {
-      margin-left: 5rem; } }
+@media (min-width: 2000px) {
+  .prizes__item {
+    margin-left: 75px; } }
+
+@media (max-width: 1024px) and (orientation: portrait) {
+  .prizes__item {
+    display: flex;
+    align-items: flex-end;
+    margin-bottom: 2.8rem; }
+    .prizes__item:last-child {
+      margin-bottom: 0; } }
+
+@media (max-width: 1024px) and (orientation: landscape) {
+  .prizes__item {
+    margin-left: 5rem; } }
+
+.prizes__item--journeys {
+  transform: translateX(100%); }
+  .prizes__item--journeys.active {
+    animation: prizesItemJourneys 0.5s linear 4s forwards; }
   .prizes__item--journeys .prizes__icon {
+    animation: prize-opacity 1.5s linear 0s forwards;
     position: relative;
-    left: -5.9rem;
-    bottom: -1.4rem;
-    width: 26.8rem; }
+    width: 28rem; }
     @media (min-width: 2000px) {
       .prizes__item--journeys .prizes__icon {
         left: -59px;
-        bottom: -14px;
         width: 268px; } }
     @media (max-width: 1024px) and (orientation: portrait) {
       .prizes__item--journeys .prizes__icon {
         left: 0;
-        bottom: 0;
         width: 9.4rem; } }
     @media (max-width: 1024px) and (orientation: landscape) {
       .prizes__item--journeys .prizes__icon {
@@ -2244,54 +2246,53 @@ img {
     @media (max-width: 768px) and (orientation: landscape) {
       .prizes__item--journeys .prizes__icon {
         width: 10rem; } }
+
+@media (min-width: 2000px) {
   .prizes__item--cases {
-    margin-left: 7rem;
-    animation-delay: 5s; }
-    @media (min-width: 2000px) {
-      .prizes__item--cases {
-        margin-left: 70px; } }
-    @media (max-width: 1024px) and (orientation: portrait) {
-      .prizes__item--cases {
-        margin-left: 0;
-        padding-left: 1.5rem; } }
+    margin-left: 70px; } }
+
+@media (max-width: 1024px) and (orientation: portrait) {
+  .prizes__item--cases {
+    margin-left: 0;
+    padding-left: 1.5rem; } }
+
+.prizes__item--cases .prizes__icon {
+  width: 34rem; }
+  @media (min-width: 2000px) {
     .prizes__item--cases .prizes__icon {
-      width: 18.8rem;
-      animation-name: prize-opacity;
-      animation-delay: 0.7s; }
-      @media (min-width: 2000px) {
-        .prizes__item--cases .prizes__icon {
-          width: 188px; } }
-      @media (max-width: 1024px) and (orientation: portrait) {
-        .prizes__item--cases .prizes__icon {
-          margin-right: 1.3rem;
-          width: 10.211rem; } }
-      @media (max-width: 1024px) and (orientation: landscape) {
-        .prizes__item--cases .prizes__icon {
-          width: 9.5rem; } }
-      @media (max-width: 768px) and (orientation: landscape) {
-        .prizes__item--cases .prizes__icon {
-          width: 7rem; } }
-  .prizes__item--codes {
-    animation-delay: 8s; }
+      width: 268px; } }
+  @media (max-width: 1024px) and (orientation: portrait) {
+    .prizes__item--cases .prizes__icon {
+      margin-right: 1.3rem;
+      width: 10.211rem; } }
+  @media (max-width: 1024px) and (orientation: landscape) {
+    .prizes__item--cases .prizes__icon {
+      width: 13rem; } }
+  @media (max-width: 768px) and (orientation: landscape) {
+    .prizes__item--cases .prizes__icon {
+      width: 10rem; } }
+
+.prizes__item--codes {
+  margin-left: 12rem; }
+  @media (max-width: 1024px) and (orientation: portrait) {
+    .prizes__item--codes {
+      padding-left: 0.8rem; } }
+  .prizes__item--codes .prizes__desc b {
+    width: 3ch; }
+  .prizes__item--codes .prizes__icon {
+    width: 26rem; }
+    @media (min-width: 2000px) {
+      .prizes__item--codes .prizes__icon {
+        width: 260px; } }
     @media (max-width: 1024px) and (orientation: portrait) {
-      .prizes__item--codes {
-        padding-left: 0.8rem; } }
-    .prizes__item--codes .prizes__icon {
-      width: 26rem;
-      animation-name: prize-opacity;
-      animation-delay: 1s; }
-      @media (min-width: 2000px) {
-        .prizes__item--codes .prizes__icon {
-          width: 260px; } }
-      @media (max-width: 1024px) and (orientation: portrait) {
-        .prizes__item--codes .prizes__icon {
-          width: 8.66rem; } }
-      @media (max-width: 1024px) and (orientation: landscape) {
-        .prizes__item--codes .prizes__icon {
-          width: 13rem; } }
-      @media (max-width: 768px) and (orientation: landscape) {
-        .prizes__item--codes .prizes__icon {
-          width: 10rem; } }
+      .prizes__item--codes .prizes__icon {
+        width: 8.66rem; } }
+    @media (max-width: 1024px) and (orientation: landscape) {
+      .prizes__item--codes .prizes__icon {
+        width: 13rem; } }
+    @media (max-width: 768px) and (orientation: landscape) {
+      .prizes__item--codes .prizes__icon {
+        width: 10rem; } }
 
 @media (max-width: 1024px) and (orientation: portrait) {
   .prizes__icon {
@@ -2305,9 +2306,15 @@ img {
 .prizes__desc {
   display: flex;
   align-items: flex-end;
+  justify-content: flex-end;
   margin: 5.6rem 0 0 0;
   font-size: 1.8rem;
-  line-height: 1.1; }
+  line-height: 1.1;
+  opacity: 0; }
+  .prizes__desc.active {
+    animation: prize-opacity 0.1s ease 2s forwards; }
+    .prizes__desc.active span {
+      animation: showTextToLeft 0.8s ease 2s forwards; }
   @media (min-width: 2000px) {
     .prizes__desc {
       margin-top: 56px;
