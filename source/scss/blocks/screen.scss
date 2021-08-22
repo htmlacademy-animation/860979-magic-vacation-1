@@ -392,6 +392,10 @@
   &.screen--show {
     opacity: 1;
     pointer-events: auto;
+
+    .result__title--victory{
+      animation: zoomOut 0.3s linear forwards;
+    }
   }
 }
 
