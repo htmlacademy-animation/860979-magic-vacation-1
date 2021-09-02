@@ -219,6 +219,12 @@
     width: 57.3rem;
     height: 11.3rem;
 
+    .screen--show &--one,
+    .screen--show &--two {
+      animation-name: scaleResultTitle;
+      animation-duration: 1s;
+    }
+
     @media (min-width: $stop-scaling) {
       width: 573px;
       height: 113px;
@@ -291,6 +297,7 @@
   animation-fill-mode: forwards;
   animation-timing-function: cubic-bezier(.51, .22, .53, .91);
 }
+
 .result__image .result__leaf-blue-1 {
   position: absolute;
   bottom: 27%;
@@ -306,6 +313,7 @@
   animation-fill-mode: forwards;
   animation-timing-function: cubic-bezier(.42, 0, .58, 1);
 }
+
 .result__image .result__leaf-blue-2 {
   position: absolute;
   bottom: 11%;
@@ -321,6 +329,7 @@
   animation-fill-mode: forwards;
   animation-timing-function: cubic-bezier(.42, 0, .58, 1);
 }
+
 .result__image .result__leaf-green {
   position: absolute;
   bottom: 22%;
@@ -336,6 +345,7 @@
   animation-fill-mode: forwards;
   animation-timing-function: cubic-bezier(.42, 0, .58, 1);
 }
+
 .result__image .result__suitcase {
   position: absolute;
   bottom: 0;
@@ -348,9 +358,11 @@
   animation-delay: 0.4s;
   animation-fill-mode: forwards;
 }
+
 .screen--show .result__flamingo {
   animation-name: showBottomFlamingo;
 }
+
 .screen--show .result__image .result__flamingo.rotate {
   opacity: 1;
   visibility: visible;
@@ -360,29 +372,36 @@
   animation-name: flamingoRotate;
   animation-timing-function: cubic-bezier(.48, .48, .68, .69);
 }
+
 .screen--show .result__suitcase {
   animation-name: showBottomSuitcase;
 }
+
 .screen--show .result__leaf-blue-1 {
   animation-name: showLeafBlueOne;
 }
+
 .screen--show .result__leaf-blue-2 {
   animation-name: showLeafBlueTwo;
 }
+
 .screen--show .result__leaf-green {
   animation-name: showLeafBlueOne;
 }
+
 .screen--show .form__field {
   flex: none;
   flex-grow: 1;
   opacity: 1;
   transition-delay: 1s, 1s;
 }
+
 .screen--result .form__button {
   opacity: 0;
   transition: all 0.3s ease; ;
   transition-delay: 1s;
 }
+
 .screen--show .form__button {
   width: 25rem;
   opacity: 1;
