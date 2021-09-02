@@ -1207,6 +1207,14 @@ img {
     transform: scale(1);
   }
 }
+@keyframes scaleResultTitle {
+  from {
+    transform: scale(1.1);
+  }
+  to {
+    transform: scale(1);
+  }
+}
 .animation-screen {
   position: fixed;
   display: flex;
@@ -3123,6 +3131,12 @@ body.endLoad .page-header__nav {
 .result--prize .result__title {
   width: 57.3rem;
   height: 11.3rem;
+}
+.screen--show .result--trip .result__title--one, .screen--show .result--trip .result__title--two,
+.screen--show .result--prize .result__title--one,
+.screen--show .result--prize .result__title--two {
+  animation-name: scaleResultTitle;
+  animation-duration: 1s;
 }
 @media (min-width: 2000px) {
   .result--trip .result__title,
