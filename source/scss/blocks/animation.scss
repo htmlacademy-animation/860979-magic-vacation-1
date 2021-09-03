@@ -205,3 +205,20 @@
   }
 }
 
+@keyframes zoomOut {
+  from {
+    transform: scale(1.2)
+  }
+  to {
+    transform: scale(1)
+  }
+}
+
+@keyframes scaleResultTitle {
+  from {
+    transform: scale(1.1)
+  }
+  to {
+    transform: scale(1)
+  }
+}
