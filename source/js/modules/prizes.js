@@ -1,3 +1,5 @@
+import CounterNumbers from './counter-numbers';
+
 export default () => {
   const prizeScreen = document.querySelector(`.screen--prizes`);
   const prizeJourneys = prizeScreen.querySelector(
