@@ -1,5 +1,6 @@
 import relaunchImgAnimate from './relaunch-img-animate';
 import Scene2DSeaCalf from './scene-2d-sea-calf';
+import Scene2DCrocodile from './scene-2d-crocodile';
 
 export default () => {
   let showResultEls = document.querySelectorAll(`.js-show-result`);
@@ -21,6 +22,11 @@ export default () => {
         if (target === `result`) {
           // eslint-disable-next-line no-unused-vars
           const scene = new Scene2DSeaCalf();
+        }
+
+        if (target === `result3`) { // LOSE. crocodile scene
+          // eslint-disable-next-line no-new
+          new Scene2DCrocodile();
         }
 
         relaunchImgAnimate();
