@@ -1,3 +1,6 @@
+import relaunchImgAnimate from './relaunch-img-animate';
+import Scene2DSeaCalf from './scene-2d-sea-calf';
+
 export default () => {
   let showResultEls = document.querySelectorAll(`.js-show-result`);
   let results = document.querySelectorAll(`.screen--result`);
@@ -12,40 +15,15 @@ export default () => {
         let targetEl = [].slice.call(results).filter(function (el) {
           return el.getAttribute(`id`) === target;
         });
-        setTimeout(() => {
-          targetEl[0].classList.add(`screen--show`);
-        }, 100);
-
+        targetEl[0].classList.add(`screen--show`);
         targetEl[0].classList.remove(`screen--hidden`);
-        let animResult, animTransformResult;
-        if (target == 'result') {
-          animResult = document.querySelectorAll('.result__title--one animate');
-          for (let j = 0; j < animResult.length; j++) {
-            animResult[j].beginElement();
-          }
-        } else if (target == 'result2') {
-          animResult = document.querySelectorAll('.result__title--two animate');
-          for (let j = 0; j < animResult.length; j++) {
-            animResult[j].beginElement();
-          }
-        } else if (target == 'result3') {
-          animResult = document.querySelectorAll('.result__title--three animate');
-          animTransformResult = document.querySelectorAll('.result__title--three animateTransform');
 
-          let j = 0,
-            howManyTimes = animResult.length;
-
-          function animTimeOut() {
-            animResult[j].beginElement();
-            animTransformResult[j].beginElement();
-            j++;
-            if (j < howManyTimes) {
-              setTimeout(animTimeOut, 50);
-            }
-          }
-
-          animTimeOut();
+        if (target === `result`) {
+          // eslint-disable-next-line no-unused-vars
+          const scene = new Scene2DSeaCalf();
         }
+
+        relaunchImgAnimate();
       });
     }
 
