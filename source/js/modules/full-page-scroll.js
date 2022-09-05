@@ -1,5 +1,8 @@
 import throttle from 'lodash/throttle';
 import TimerForGame from './timer';
+// import Scene2DSeaCalf from './scene-2d-sea-calf.js';
+
+// const scene = new Scene2DSeaCalf();
 
 const gameScreenID = 4;
 const timerForGame = new TimerForGame(`.game__counter`, 5, 1);
