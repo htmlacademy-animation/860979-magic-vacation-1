@@ -1,12 +1,33 @@
 import Swiper from "swiper";
+import Scene3DStory from "./scene-3d-story";
+
+const CN_BLUE = `body-theme-blue`;
+const CN_LIGHT_BLUE = `body-theme-light-blue`;
+const CN_PURPLE = `body-theme-purple`;
+const CN_DARK = `body-theme-dark`;
+
+const bodyThemeClasses = [
+  CN_BLUE,
+  CN_LIGHT_BLUE,
+  CN_PURPLE,
+  CN_DARK,
+];
+
+const removeTheme = () => {
+  bodyThemeClasses.forEach((cn) => {
+    document.body.classList.remove(cn);
+  });
+};
 
 export default () => {
   let storySlider;
-  let sliderContainer = document.getElementById(`story`);
-  sliderContainer.style.backgroundImage = `url("img/slide1.jpg"), linear-gradient(180deg, rgba(83, 65, 118, 0) 0%, #523E75 16.85%)`;
-  let bodyClass = document.querySelector(`body`);
+
+  const scene = new Scene3DStory();
 
   const setSlider = function () {
+    document.body.classList.add(CN_DARK);
+    scene.setSceneBackground(0);
+
     if (((window.innerWidth / window.innerHeight) < 1) || window.innerWidth < 769) {
       storySlider = new Swiper(`.js-slider`, {
         pagination: {
@@ -19,17 +40,13 @@ export default () => {
         on: {
           slideChange: () => {
             if (storySlider.activeIndex === 0 || storySlider.activeIndex === 1) {
-              sliderContainer.style.backgroundImage = `url("img/slide1.jpg"), linear-gradient(180deg, rgba(83, 65, 118, 0) 0%, #523E75 16.85%)`;
+              scene.setSceneBackground(0);
             } else if (storySlider.activeIndex === 2 || storySlider.activeIndex === 3) {
-              sliderContainer.style.backgroundImage = `url("img/slide2.jpg"), linear-gradient(180deg, rgba(45, 54, 179, 0) 0%, #2A34B0 16.85%)`;
-              bodyClass.classList.add(`ui-dark-blue`);
+              scene.setSceneBackground(1);
             } else if (storySlider.activeIndex === 4 || storySlider.activeIndex === 5) {
-              sliderContainer.style.backgroundImage = `url("img/slide3.jpg"), linear-gradient(180deg, rgba(92, 138, 198, 0) 0%, #5183C4 16.85%)`;
-              bodyClass.classList.remove(`ui-dark-blue`);
-              bodyClass.classList.add(`ui-light-blue`);
+              scene.setSceneBackground(2);
             } else if (storySlider.activeIndex === 6 || storySlider.activeIndex === 7) {
-              sliderContainer.style.backgroundImage = `url("img/slide4.jpg"), linear-gradient(180deg, rgba(45, 39, 63, 0) 0%, #2F2A42 16.85%)`;
-              bodyClass.classList.remove(`ui-light-blue`);
+              scene.setSceneBackground(3);
             }
           },
           resize: () => {
@@ -56,21 +73,20 @@ export default () => {
         },
         on: {
           slideChange: () => {
-            if (storySlider.activeIndex === 0 || storySlider.activeIndex === 1) {
-              sliderContainer.style.backgroundImage = `url("img/slide1.jpg")`;
-              bodyClass.classList.add(`ui-violet`);
-              bodyClass.classList.remove(`ui-dark-blue`, `ui-light-blue`);
-            } else if (storySlider.activeIndex === 2 || storySlider.activeIndex === 3) {
-              sliderContainer.style.backgroundImage = `url("img/slide2.jpg")`;
-              bodyClass.classList.remove(`ui-violet`, `ui-light-blue`);
-              bodyClass.classList.add(`ui-dark-blue`);
-            } else if (storySlider.activeIndex === 4 || storySlider.activeIndex === 5) {
-              sliderContainer.style.backgroundImage = `url("img/slide3.jpg")`;
-              bodyClass.classList.remove(`ui-violet`, `ui-dark-blue`);
-              bodyClass.classList.add(`ui-light-blue`);
-            } else if (storySlider.activeIndex === 6 || storySlider.activeIndex === 7) {
-              sliderContainer.style.backgroundImage = `url("img/slide4.jpg")`;
-              bodyClass.classList.remove(`ui-violet`, `ui-dark-blue`, `ui-light-blue`);
+            removeTheme();
+
+            if (storySlider.activeIndex === 0) {
+              document.body.classList.add(CN_PURPLE);
+              scene.setSceneBackground(0);
+            } else if (storySlider.activeIndex === 2) {
+              document.body.classList.add(CN_BLUE);
+              scene.setSceneBackground(1);
+            } else if (storySlider.activeIndex === 4) {
+              document.body.classList.add(CN_LIGHT_BLUE);
+              scene.setSceneBackground(2);
+            } else if (storySlider.activeIndex === 6) {
+              document.body.classList.add(CN_DARK);
+              scene.setSceneBackground(3);
             }
           },
           resize: () => {
@@ -83,10 +99,10 @@ export default () => {
     }
   };
 
-
   window.addEventListener(`resize`, function () {
     if (storySlider) {
       storySlider.destroy();
+      removeTheme();
     }
     setSlider();
   });

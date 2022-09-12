@@ -10,6 +10,7 @@ import social from './modules/social.js';
 import scripts from './modules/scripts.js';
 import FullPageScroll from './modules/full-page-scroll';
 import prizes from "./modules/prizes";
+import AnimationLauncher from './modules/animation-launcher';
 
 // init modules
 scripts();
@@ -46,3 +47,6 @@ const flamingoImage = document.querySelector(`.result__flamingo`);
 flamingoImage.onanimationend = () => {
   flamingoImage.classList.add(`rotate`);
 };
+
+const animationLauncher = new AnimationLauncher();
+animationLauncher.init();
